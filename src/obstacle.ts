@@ -15,7 +15,7 @@ export class Obstacle {
   draw() {
     this.ctx.fillStyle = 'grey';
     this.ctx.fillRect(this.x, 0, this.width, this.y);
-    this.ctx.fillRect(this.x, this.y + this.height / 2, this.width, FRAME_HEIGHT);
+    this.ctx.fillRect(this.x, this.y + this.height, this.width, FRAME_HEIGHT);
     this.tick++;
     this.update();
   }
