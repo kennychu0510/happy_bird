@@ -23,6 +23,6 @@ export class Bird {
   }
 
   jump() {
-    
+    this.velocity = -300
   }
 }

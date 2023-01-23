@@ -6,6 +6,9 @@ import { selectElement } from './helper';
 import { Obstacle } from './obstacle';
 
 const canvas = selectElement('canvas') as HTMLCanvasElement;
+const jumpButton = selectElement('#jump-button') as HTMLButtonElement;
+
+
 
 const ctx = canvas.getContext('2d')!;
 const OBSTACLES: Obstacle[] = [new Obstacle(ctx, 0), new Obstacle(ctx, 150)];
@@ -18,3 +21,7 @@ function draw() {
 }
 
 requestAnimationFrame(draw);
+
+jumpButton.addEventListener('click', () => {
+  BIRD.jump();
+})
